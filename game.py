@@ -9,12 +9,12 @@ def Game(money):
     pick = input("Do you want to pick money?")
     if pick.lower() in ('y', 'yes'): #If user wants to pick money, he will get the random "number" added to his current money.
       money = money+number
-      print(f"You caught {number} bucks\n You currently have {money} bucks")
+      print(f"You caught {number} bucks\nYou currently have {money} bucks")
       Game(money)
     else:
       invest = input("Want to double your earnings?")
       if invest.lower() in ('y', 'yes'): #You know what happens here..
-        print(f"You just got {money} !")
+        print(f"You just got {money}!")
         money *= 2 #Investment is doubling your money by "*= 2".
         Game(money) #Go back to picking money with the current value of money that you have.
 start()
