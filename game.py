@@ -3,7 +3,7 @@ def start():
   print('Hello! The objective of the game is to collect money')
   a = input("Do you want to play?")
   if a.lower() in ('y', 'yes'):
-    Game()
+    Game(0)
 def Game(money):
     number = random.randint(1,50)
     pick = input("Do you want to pick money?")
@@ -17,4 +17,4 @@ def Game(money):
         print(f"You just got {money} !")
         money *= 2 
         Game(money)
-start(0)
+start()
