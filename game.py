@@ -5,16 +5,16 @@ def start():
   if a.lower() in ('y', 'yes'): #If user inputs one of the following, game starts with 0 money.
     Game(0)
 def Game(money):
-    number = random.randint(1,51) #generate a random number between 1 and 50 as money.
+    number = random.randint(1,51) #generate a random number 
     pick = input("Do you want to pick money?")
-    if pick.lower() in ('y', 'yes'): #If user wants to pick money, he will get the random "number" added to his current money.
-      money = money+number
+    if pick.lower() in ('y', 'yes'): 
+      money += number
       print(f"You caught {number} bucks\nYou currently have {money} bucks")
       Game(money)
     else:
       invest = input("Want to double your earnings?")
-      if invest.lower() in ('y', 'yes'): #You know what happens here..
+      if invest.lower() in ('y', 'yes'): 
         print(f"You just got {money}!")
-        money *= 2 #Investment is doubling your money by "*= 2".
-        Game(money) #Go back to picking money with the current value of money that you have.
+        money *= 2 
+        Game(money) 
 start()
